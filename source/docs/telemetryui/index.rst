@@ -17,6 +17,8 @@ These are simply better looking, at the cost of more space or speed of activatio
 
     installation
     getting-started
-    basemodules
-    create
+    base-modules
+    decorated-modules
+    create-your-own
+    planned
 
