@@ -5,13 +5,9 @@ As of now, we are using Jitpack and github packages as our package hosting. We w
 
 
 
-Our jitpack `Package`_ is generally more recommended as github packages require you to input credentials for gradle.
+Our jitpack `Package`_ is generally more recommended.
 
 .. _Package : https://jitpack.io/#Zeonthestupid/telemetryui
-
-However, you can install from `github packages`_
-
-.. _github packages:
 
 Or, if you'd rather, you can clone the `repo`_ directly into your project folder!
 

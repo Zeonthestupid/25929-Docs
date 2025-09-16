@@ -13,9 +13,7 @@ Toggle
 
 The decorated toggle functionally acts the same, however, instead of just an on/off name, there is also an additional switch like indicator.
 
-The module now looks like:
-
-    > [0| ] OffName
+T
 
 Refer to the previous Toggle module for usage
 

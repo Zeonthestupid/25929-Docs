@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Base Modules" href="base-modules.html" /><link rel="prev" title="Installation" href="installation.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Getting Started - 25929 0.2.0 documentation</title>
+        <title>Getting Started - 25929 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -167,7 +167,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">25929 0.2.0 documentation</div></a>
+      <a href="../../index.html"><div class="brand">25929 1.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -190,7 +190,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
-  <span class="sidebar-brand-text">25929 0.2.0 documentation</span>
+  <span class="sidebar-brand-text">25929 1.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -207,7 +207,6 @@
 <li class="toctree-l2"><a class="reference internal" href="base-modules.html">Base Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="decorated-modules.html">Decorated Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create-your-own.html">Creating Your Own Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="planned.html">Planned Features</a></li>
 </ul>
 </li>
 </ul>
@@ -244,7 +243,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -257,8 +256,48 @@
 <li><p><strong>Core modules</strong> (Which makeup the functionality and must be imported in any project using TUI)</p></li>
 <li><p><strong>Base modules</strong> (Which makeup the base actions of menus such as the ability to run functions, change parameters and more)</p></li>
 <li><p><strong>Decorated modules</strong> (Which are base modules with extra <strong>flair</strong>)</p></li>
-<li><p><strong>Wrapped modules</strong> (Which are ways to wrap other modules into things like columns and more)</p></li>
+<li><p><strong>Wrapped modules</strong> (Which are ways to wrap other modules into things like dropdowns and columns)</p></li>
 </ul>
+<p>In order to add an instance of telemetryUI to your opMode, you may use the sample code below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">telemetryui.core.</span><span class="o">*</span><span class="p">;</span>
+
+
+
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">tuiModule</span><span class="o">&gt;</span> <span class="n">display01</span><span class="p">;</span>
+    <span class="n">displayBuffer</span> <span class="n">mainmenu</span> <span class="o">=</span> <span class="n">new</span> <span class="n">displayBuffer</span><span class="p">(</span><span class="s2">&quot;0. Main Menu&quot;</span><span class="p">);</span>
+    <span class="n">displayManager</span> <span class="n">displaymanager</span> <span class="o">=</span> <span class="n">new</span> <span class="n">displayManager</span><span class="p">(</span><span class="n">telemetry</span><span class="p">,</span> <span class="n">gamepad1</span><span class="p">);</span>
+
+    <span class="nd">@Override</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">display01</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">Action</span><span class="p">(</span><span class="s2">&quot;StopRobot&quot;</span><span class="p">,</span> <span class="n">this</span><span class="p">::</span><span class="n">requestOpModeStop</span><span class="p">));</span>
+        <span class="n">displaymanager</span><span class="o">.</span><span class="n">loadBuffer</span><span class="p">(</span><span class="n">mainmenu</span><span class="p">);</span>
+        <span class="n">mainmenu</span><span class="o">.</span><span class="n">setItems</span><span class="p">(</span><span class="n">display01</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">displaymanager</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<section id="understanding-tui">
+<h2>Understanding TUI<a class="headerlink" href="#understanding-tui" title="Link to this heading">¶</a></h2>
+<p>TelemetryUI is split into three hierarchical levels:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DisplayManager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DisplayBuffer</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Modules</span></code></p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">DisplayManager</span></code> is what controls inputs, creates the telemetry lines, and wraps the whole system. To create a menu, load a propagated <code class="docutils literal notranslate"><span class="pre">displayBuffer</span></code> into the <code class="docutils literal notranslate"><span class="pre">displayManager</span></code> by calling the <code class="docutils literal notranslate"><span class="pre">.loadbuffer()</span></code> method.</p>
+<p><code class="docutils literal notranslate"><span class="pre">displayBuffer</span></code> is what holds all the modules / lines. It contains many helpful methods, that are most commonly used by the <code class="docutils literal notranslate"><span class="pre">displayManager</span></code> . However, you are able to use commands such as <code class="docutils literal notranslate"><span class="pre">.updateItems()</span></code> to interface on the buffer level.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Modules</span></code> are lines within the menus. They function similar to <code class="docutils literal notranslate"><span class="pre">telemetry.addData()</span></code> in that they are their own respective line. Modules can be split up into three different times.</p>
+<p>Unlike many other display libraries, you do not need to unload a buffer while changing the contents.</p>
+</section>
+<section id="creating-menus">
+<h2>Creating Menus<a class="headerlink" href="#creating-menus" title="Link to this heading">¶</a></h2>
+<p>To create a menu, start by forming a new <code class="docutils literal notranslate"><span class="pre">displayBuffer</span></code>. You may then call the <code class="docutils literal notranslate"><span class="pre">.add()</span></code> method, or <code class="docutils literal notranslate"><span class="pre">.set()</span></code> / <code class="docutils literal notranslate"><span class="pre">.update()</span></code> methods to add one module, or override the list respectively. Internally, <code class="docutils literal notranslate"><span class="pre">displayBuffer</span></code> contains a list of <code class="docutils literal notranslate"><span class="pre">tuiModules</span></code> ; a class that’s extended by all of the modules.</p>
+<p>You may use any combination of <a class="reference external" href="base-modules">base</a> , <a class="reference external" href="decorated-modules">decorated</a> or wrapped modules within your menus.</p>
+</section>
 </section>
 
         </article>
@@ -304,13 +343,33 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#understanding-tui">Understanding TUI</a></li>
+<li><a class="reference internal" href="#creating-menus">Creating Menus</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=938c9ccc"></script>
+</div><script src="../../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Planned Features" href="planned.html" /><link rel="prev" title="Decorated Modules" href="decorated-modules.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="Decorated Modules" href="decorated-modules.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Creating Your Own Modules - 25929 0.2.0 documentation</title>
+        <title>Creating Your Own Modules - 25929 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -167,7 +167,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">25929 0.2.0 documentation</div></a>
+      <a href="../../index.html"><div class="brand">25929 1.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
-  <span class="sidebar-brand-text">25929 0.2.0 documentation</span>
+  <span class="sidebar-brand-text">25929 1.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -207,7 +207,6 @@
 <li class="toctree-l2"><a class="reference internal" href="base-modules.html">Base Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="decorated-modules.html">Decorated Modules</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Creating Your Own Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="planned.html">Planned Features</a></li>
 </ul>
 </li>
 </ul>
@@ -313,7 +312,7 @@ In the case of actions, the <code class="docutils literal notranslate"><span cla
 <p>You most likely want more than just actions, so here’s the rest of the basic functions:</p>
 <p>In order to return a usable value for your code, you can use the <code class="docutils literal notranslate"><span class="pre">getValue()</span></code> method, so long as it returns the object type of your returning value. Refer to the base modules page if you’re confused on what this means.</p>
 <p>If you want to have different things activate when you click L/R, you may use the <code class="docutils literal notranslate"><span class="pre">onLeft()</span></code> or <code class="docutils literal notranslate"><span class="pre">onRight()</span></code> methods respectively.</p>
-<p>If for some reason you’d like to skip the module entirely (for example a custom display), you may return <code class="docutils literal notranslate"><span class="pre">true</span></code> with the <code class="docutils literal notranslate"><span class="pre">isSkipping()</span></code> method</p>
+<p>If for some reason you’d like to skip the module when moving to it entirely (for example a custom display), you may return <code class="docutils literal notranslate"><span class="pre">true</span></code> with the <code class="docutils literal notranslate"><span class="pre">isSkipping()</span></code> method</p>
 </section>
 <section id="utilizing-up-down-inputs">
 <h2>Utilizing Up/Down Inputs<a class="headerlink" href="#utilizing-up-down-inputs" title="Link to this heading">¶</a></h2>
@@ -334,15 +333,7 @@ In the case of actions, the <code class="docutils literal notranslate"><span cla
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="planned.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Planned Features</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
+          
           <a class="prev-page" href="decorated-modules.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
@@ -399,7 +390,7 @@ In the case of actions, the <code class="docutils literal notranslate"><span cla
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=938c9ccc"></script>
+</div><script src="../../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>

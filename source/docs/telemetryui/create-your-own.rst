@@ -83,7 +83,7 @@ In order to return a usable value for your code, you can use the ``getValue()`` 
 
 If you want to have different things activate when you click L/R, you may use the ``onLeft()`` or ``onRight()`` methods respectively.
 
-If for some reason you'd like to skip the module entirely (for example a custom display), you may return ``true`` with the ``isSkipping()`` method
+If for some reason you'd like to skip the module when moving to it entirely (for example a custom display), you may return ``true`` with the ``isSkipping()`` method
 
 
 
