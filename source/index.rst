@@ -21,4 +21,3 @@ Our team aims to make *meta changing* software, changing how we interface with r
 
    docs/manifesto
    docs/telemetryui/index
-   docs/dab/main
