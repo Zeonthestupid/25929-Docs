@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Creating Your Own Modules" href="create-your-own.html" /><link rel="prev" title="Base Modules" href="base-modules.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="Creating Your Own Modules" href="../telemetryui/create-your-own.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Decorated Modules - 25929 1.0 documentation</title>
+        <title>DABXMLREF - 25929 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -201,15 +201,15 @@
   <p class="caption" role="heading"><span class="caption-text">25929 Docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../manifesto.html">Manifesto</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">TelemetryUI Lib</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of TelemetryUI Lib</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base-modules.html">Base Modules</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Decorated Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create-your-own.html">Creating Your Own Modules</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../telemetryui/index.html">TelemetryUI Lib</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of TelemetryUI Lib</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../telemetryui/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../telemetryui/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../telemetryui/base-modules.html">Base Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../telemetryui/decorated-modules.html">Decorated Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../telemetryui/create-your-own.html">Creating Your Own Modules</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../dab/main.html">DABXMLREF</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">DABXMLREF</a></li>
 </ul>
 
 </div>
@@ -230,7 +230,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/docs/telemetryui/decorated-modules.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/docs/dab/main.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -244,26 +244,38 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="decorated-modules">
-<h1>Decorated Modules<a class="headerlink" href="#decorated-modules" title="Link to this heading">¶</a></h1>
-<p>Only some of the base modules appear as decorated modules, as decorated modules inherit general UX design principles that some of the base modules lack.</p>
-<p>Like with the base modules you may call <code class="docutils literal notranslate"><span class="pre">getValue()</span></code> on the class or <code class="docutils literal notranslate"><span class="pre">getValue(index)</span></code> / <code class="docutils literal notranslate"><span class="pre">getItems()</span></code> on the display buffer.</p>
-<section id="toggle">
-<h2>Toggle<a class="headerlink" href="#toggle" title="Link to this heading">¶</a></h2>
-<p>The decorated toggle functionally acts the same, however, instead of just an on/off name, there is also an additional switch like indicator.</p>
-<p>Refer to the previous Toggle module for usage</p>
-</section>
-<section id="dropdown">
-<h2>Dropdown<a class="headerlink" href="#dropdown" title="Link to this heading">¶</a></h2>
-<p>Dropdowns within the decorated modules work slightly differently, showing a full list of the options when clicked. This means that you should take caution in creating long lists, as they may get cut off.</p>
-<p>By clicking on the dropdown the first time, it will open up the list, and the second time will close it, selecting the item you picked.</p>
-</section>
+          <section id="dabxmlref">
+<h1>DABXMLREF<a class="headerlink" href="#dabxmlref" title="Link to this heading">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;routine&gt;
+  &lt;robot&gt;
+    &lt;component id=&quot;leftDrive&quot;  type=&quot;DcMotor&quot; direction=&quot;FORWARD&quot;  zeroPowerBehavior=&quot;BRAKE&quot; /&gt;
+    &lt;component id=&quot;rightDrive&quot; type=&quot;DcMotor&quot; direction=&quot;REVERSE&quot;  zeroPowerBehavior=&quot;BRAKE&quot; /&gt;
+    &lt;component id=&quot;arm&quot;        type=&quot;DcMotor&quot; direction=&quot;FORWARD&quot;  zeroPowerBehavior=&quot;BRAKE&quot; /&gt;
+    &lt;component id=&quot;grabber&quot;    type=&quot;Servo&quot; /&gt;
+    &lt;component id=&quot;imu&quot;        type=&quot;IMU&quot; /&gt;
+    &lt;component id=&quot;color1&quot;     type=&quot;ColorSensor&quot; /&gt;
+    &lt;component id=&quot;webcam1&quot;    type=&quot;Camera&quot; /&gt;
+  &lt;/robot&gt;
+
+  &lt;init&gt;
+    &lt;command type=&quot;setServo&quot; id=&quot;grabber&quot; position=&quot;0.50&quot; /&gt;
+    &lt;command type=&quot;moveMotor&quot; id=&quot;arm&quot; position=&quot;0&quot; power=&quot;0.4&quot; /&gt;
+    &lt;callback name=&quot;onInitReady&quot; /&gt;
+    &lt;waitUntil imuHeading=&quot;0&quot; /&gt;
+  &lt;/init&gt;
+
+  &lt;auto&gt;
+    &lt;line toX=&quot;24.0&quot; toY=&quot;0.0&quot; to
+</pre></div>
+</div>
+<p>hi</p>
 </section>
 
         </article>
@@ -271,23 +283,15 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="create-your-own.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Creating Your Own Modules</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="base-modules.html">
+          
+          <a class="prev-page" href="../telemetryui/create-your-own.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Base Modules</div>
+                <div class="title">Creating Your Own Modules</div>
                 
               </div>
             </a>
@@ -309,28 +313,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Decorated Modules</a><ul>
-<li><a class="reference internal" href="#toggle">Toggle</a></li>
-<li><a class="reference internal" href="#dropdown">Dropdown</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

@@ -1,0 +1,29 @@
+DABXMLREF
+=========
+
+.. code-block::
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <routine>
+      <robot>
+        <component id="leftDrive"  type="DcMotor" direction="FORWARD"  zeroPowerBehavior="BRAKE" />
+        <component id="rightDrive" type="DcMotor" direction="REVERSE"  zeroPowerBehavior="BRAKE" />
+        <component id="arm"        type="DcMotor" direction="FORWARD"  zeroPowerBehavior="BRAKE" />
+        <component id="grabber"    type="Servo" />
+        <component id="imu"        type="IMU" />
+        <component id="color1"     type="ColorSensor" />
+        <component id="webcam1"    type="Camera" />
+      </robot>
+
+      <init>
+        <command type="setServo" id="grabber" position="0.50" />
+        <command type="moveMotor" id="arm" position="0" power="0.4" />
+        <callback name="onInitReady" />
+        <waitUntil imuHeading="0" />
+      </init>
+
+      <auto>
+        <line toX="24.0" toY="0.0" to
+
+
+hi

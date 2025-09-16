@@ -209,6 +209,7 @@
 <li class="toctree-l2"><a class="reference internal" href="create-your-own.html">Creating Your Own Modules</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../dab/main.html">DABXMLREF</a></li>
 </ul>
 
 </div>
@@ -261,22 +262,23 @@
 <p>In order to add an instance of telemetryUI to your opMode, you may use the sample code below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">telemetryui.core.</span><span class="o">*</span><span class="p">;</span>
 
-
-
-    <span class="n">List</span><span class="o">&lt;</span><span class="n">tuiModule</span><span class="o">&gt;</span> <span class="n">display01</span><span class="p">;</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">tuiModule</span><span class="o">&gt;</span> <span class="n">display01</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
     <span class="n">displayBuffer</span> <span class="n">mainmenu</span> <span class="o">=</span> <span class="n">new</span> <span class="n">displayBuffer</span><span class="p">(</span><span class="s2">&quot;0. Main Menu&quot;</span><span class="p">);</span>
-    <span class="n">displayManager</span> <span class="n">displaymanager</span> <span class="o">=</span> <span class="n">new</span> <span class="n">displayManager</span><span class="p">(</span><span class="n">telemetry</span><span class="p">,</span> <span class="n">gamepad1</span><span class="p">);</span>
+    <span class="n">displayManager</span> <span class="n">displaymanager</span><span class="p">;</span>
 
     <span class="nd">@Override</span>
     <span class="n">public</span> <span class="n">void</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">display01</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">Action</span><span class="p">(</span><span class="s2">&quot;StopRobot&quot;</span><span class="p">,</span> <span class="n">this</span><span class="p">::</span><span class="n">requestOpModeStop</span><span class="p">));</span>
+
+        <span class="n">displaymanager</span> <span class="o">=</span> <span class="n">new</span> <span class="n">displayManager</span><span class="p">(</span><span class="n">telemetry</span><span class="p">,</span> <span class="n">gamepad1</span><span class="p">);</span>
+        <span class="n">display01</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">Action</span><span class="p">(</span><span class="s2">&quot;Stop Robot&quot;</span><span class="p">,</span> <span class="n">this</span><span class="p">::</span><span class="n">requestOpModeStop</span><span class="p">));</span>
         <span class="n">displaymanager</span><span class="o">.</span><span class="n">loadBuffer</span><span class="p">(</span><span class="n">mainmenu</span><span class="p">);</span>
         <span class="n">mainmenu</span><span class="o">.</span><span class="n">setItems</span><span class="p">(</span><span class="n">display01</span><span class="p">);</span>
+
     <span class="p">}</span>
 
     <span class="nd">@Override</span>
     <span class="n">public</span> <span class="n">void</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">displaymanager</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="n">displaymanager</span><span class="o">.</span><span class="n">update</span><span class="p">();</span>
     <span class="p">}</span>
 </pre></div>
 </div>
