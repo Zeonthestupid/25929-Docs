@@ -1,6 +1,8 @@
 Getting Started
 ===============
 
+To use TelemetryUI, use the D-pad keys plus the A button!
+
 
 TelemetryUI is split into four different sections:
 
