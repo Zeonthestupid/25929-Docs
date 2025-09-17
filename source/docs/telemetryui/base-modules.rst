@@ -37,7 +37,7 @@ In order to use standard telemetry alongside menus, you can use the classic tuiM
     new Classic("Hi I display a line")
     new Classic("I display a line", "with data!")
 
-Classic modules allow you to both display lines, and display them alongside data. Extend features of classic telemetry, data will automatically use the built in ``.tostring()`` to convert ints, floats and anything else into a displayable string.
+Classic modules allow you to both display lines, and display lines alongside data. Extending features of classic telemetry, the data argument will automatically use the built in ``.tostring()`` to convert ints, floats and anything else into a displayable string.
 
     ⚠️ If you need to use only ``Classic`` Modules within a buffer, make sure to set the third argument to false ``new Classic("Hi", "", false)`` ,  which overrides the skip functionality to prevent an overflow error.
 
