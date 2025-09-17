@@ -53,7 +53,7 @@ Toggles are menu items that act as booleans, allowing you to toggle a parameter 
 
 .. code-block:: java
 
-    new Toggle("NameWhen0", "NameWhen1", 1)
+    new Toggle("NameWhenfalse", "NameWhentrue", true)
 
 Toggles start with a state denoted as the third argument.
 
